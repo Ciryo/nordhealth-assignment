@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/auth/login', [AuthController::class, 'authenticate']);
+Route::get('/get_basics/{id}', [AuthController::class,'getBasics']);
+Route::post('/products/list', [ProductController::class, 'getProducts']);
+Route::post('/products/product/{id}', [ProductController::class, 'setProductData']);
+
+    
+//protected routes, not implemented yet
+Route::middleware([Auth::class])->group(function(){
+    // Route::get('/get_basics/{id}', [AuthController::class,'getBasics']);
+});
+
+
+//free routes
+Route::group([
+    'excluded_middleware' => ['auth'],
+], function () {
+    //any groups 
+});
+

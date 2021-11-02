@@ -1,0 +1,30 @@
+.dashboard {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+}
+.dashboard .login-container {
+  display: flex;
+  align-items: center;
+}
+.dashboard .login-container h3 {
+  margin: 0;
+  align-self: center;
+}
+.dashboard .login-container > div, .dashboard .login-container > button {
+  margin-left: 8px;
+  background-color: white;
+}
+.dashboard .login-container > div > #outlined-required, .dashboard .login-container > button > #outlined-required {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.dashboard .login-container > button {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}

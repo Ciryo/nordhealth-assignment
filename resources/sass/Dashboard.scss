@@ -1,0 +1,34 @@
+.dashboard {
+	display: flex;
+	height: 80px;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: aliceblue;
+
+	.login-container {
+		display:flex;
+		align-items: center;
+
+		h3 {
+			margin: 0;
+			align-self: center;
+		}
+		>div, >button {
+			margin-left: 8px;
+			background-color: white;
+
+			>#outlined-required {
+				padding-top: 8px;
+				padding-bottom: 8px;			
+			}
+		}
+		>button {
+			height: min-content;
+		}
+	}
+	.develements-container {
+
+	}
+}
