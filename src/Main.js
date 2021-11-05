@@ -12,7 +12,8 @@ import ProductList from './products/ProductList';
 import './../public/css/Main.css';
 
 const ADMIN_LOCATIONS = [
-    ":8181"
+    ":8181",
+    "nordhealth-assignment-diyzw.ondigitalocean"
 ];
 
 class Main extends Component {
